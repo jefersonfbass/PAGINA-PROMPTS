@@ -36,7 +36,7 @@ export default function Hero() {
           Pack Premium de<br />Prompts de Ostentação
         </h1>
         
-        <p className="text-[14px] text-red-500 font-bold leading-[1.4] max-w-2xl mx-auto">
+        <p className="text-[14px] text-text-muted leading-[1.4] max-w-2xl mx-auto">
           Crie fotos de luxo com o seu rosto usando IA
         </p>
       </motion.div>
