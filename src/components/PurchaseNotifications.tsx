@@ -39,10 +39,10 @@ export default function PurchaseNotifications() {
     setNotifications((prev) => [...prev, newNotification]);
     setCounter((c) => c + 1);
 
-    // Remove notification after 5 seconds
+    // Remove notification after 3 seconds
     setTimeout(() => {
       setNotifications((prev) => prev.filter((n) => n.id !== newNotification.id));
-    }, 5000);
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function PurchaseNotifications() {
   }, [addNotification]);
 
   return (
-    <div className="fixed bottom-10 left-6 z-[999] pointer-events-none flex flex-col gap-3">
+    <div className="fixed bottom-4 left-4 z-[999] pointer-events-none flex flex-col gap-3">
       <AnimatePresence>
         {notifications.map((n) => (
           <motion.div
