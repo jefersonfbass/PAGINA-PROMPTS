@@ -49,12 +49,12 @@ export default function PurchaseNotifications() {
     // Initial delay before first notification
     const initialDelay = setTimeout(() => {
       addNotification();
-    }, 1500);
+    }, 5000);
 
-    // Random interval for subsequent notifications (8 seconds)
+    // Random interval for subsequent notifications (18 seconds)
     const interval = setInterval(() => {
       addNotification();
-    }, 8000);
+    }, 18000);
 
     return () => {
       clearTimeout(initialDelay);
@@ -63,33 +63,30 @@ export default function PurchaseNotifications() {
   }, [addNotification]);
 
   return (
-    <div className="fixed bottom-4 left-4 z-[999] pointer-events-none flex flex-col gap-3">
+    <div className="fixed bottom-3 left-3 z-[999] pointer-events-none flex flex-col gap-1.5">
       <AnimatePresence>
         {notifications.map((n) => (
           <motion.div
             key={n.id}
-            initial={{ opacity: 0, x: -100, scale: 0.8 }}
+            initial={{ opacity: 0, x: -50, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 100, scale: 0.8 }}
-            transition={{ type: "spring", stiffness: 100, damping: 15 }}
-            className="flex items-center gap-3 bg-[#0B0B0B]/95 border border-[#F5C542]/30 p-2.5 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-md min-w-[240px]"
+            exit={{ opacity: 0, x: 50, scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 120, damping: 20 }}
+            className="flex items-center gap-2 bg-[#0B0B0B]/98 border border-[#F5C542]/40 p-1.5 pr-3 rounded-md shadow-[0_5px_20px_rgba(0,0,0,0.6)] backdrop-blur-xl"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#F5C542]/20 blur-lg rounded-full" />
-              <div className="relative w-8 h-8 bg-[#F5C542] rounded-full flex items-center justify-center border border-black/10">
-                <ShoppingBag className="w-4 h-4 text-black" strokeWidth={2.5} />
+            <div className="relative shrink-0">
+              <div className="absolute inset-0 bg-[#F5C542]/10 blur-md rounded-full" />
+              <div className="relative w-6 h-6 bg-[#F5C542] rounded-full flex items-center justify-center border border-black/5">
+                <ShoppingBag className="w-3 h-3 text-black" strokeWidth={3} />
               </div>
             </div>
             
-            <div className="flex flex-col">
-              <p className="text-[11px] text-white font-bold leading-tight">
-                {n.name} <span className="text-white/40 font-medium whitespace-nowrap">de {n.location}</span>
+            <div className="flex flex-col justify-center">
+              <p className="text-[9px] text-white font-bold leading-none">
+                {n.name} <span className="text-white/30 font-medium">({n.location})</span>
               </p>
-              <p className="text-[10px] text-[#F5C542] font-black uppercase tracking-wider mt-0.5">
-                Adquiriu o {n.plan}
-              </p>
-              <p className="text-[8px] text-white/30 font-medium uppercase mt-0.5">
-                {n.time}
+              <p className="text-[8.5px] text-[#F5C542] font-black uppercase tracking-tight mt-0.5">
+                Adquiriu {n.plan}
               </p>
             </div>
           </motion.div>
