@@ -32,17 +32,17 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="text-center w-full max-w-4xl relative z-10 px-5"
       >
-        <h1 className="text-[32px] font-[900] leading-none mb-2 text-gradient-gold">
+        <h1 className="text-[32px] font-[900] leading-none mb-1 text-gradient-gold">
           Pack Premium de<br />Prompts de Ostentação
         </h1>
         
-        <p className="text-[14px] text-text-muted leading-[1.4] max-w-2xl mx-auto mb-2">
+        <p className="text-[14px] text-red-500 font-bold leading-[1.4] max-w-2xl mx-auto">
           Crie fotos de luxo com o seu rosto usando IA
         </p>
       </motion.div>
 
       {/* Full-Width Carousel Container */}
-      <div className="relative w-full aspect-square mb-6 group touch-pan-y">
+      <div className="relative w-full aspect-square -mt-4 mb-6 group touch-pan-y">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
