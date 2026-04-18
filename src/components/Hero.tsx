@@ -35,6 +35,10 @@ export default function Hero() {
         <h1 className="text-[32px] font-[900] leading-none mb-2 text-gradient-gold">
           Pack Premium de<br />Prompts de Ostentação
         </h1>
+        
+        <p className="text-[14px] text-text-muted leading-[1.4] max-w-2xl mx-auto mb-2">
+          Crie fotos de luxo com o seu rosto usando IA
+        </p>
       </motion.div>
 
       {/* Full-Width Carousel Container */}
