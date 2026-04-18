@@ -57,6 +57,10 @@ export default function Hero() {
               alt={`Exemplo ${currentIndex + 1}`} 
               className="w-full h-full object-contain"
               referrerPolicy="no-referrer"
+              decoding="async"
+              fetchPriority={currentIndex === 0 ? "high" : "low"}
+              width="800"
+              height="800"
             />
           </motion.div>
         </AnimatePresence>

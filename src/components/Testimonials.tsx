@@ -63,6 +63,10 @@ export default function Testimonials() {
                 alt={t.name} 
                 className="w-full h-full object-cover rounded-full"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
+                width="64"
+                height="64"
               />
             </div>
 

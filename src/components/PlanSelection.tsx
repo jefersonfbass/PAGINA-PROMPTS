@@ -178,6 +178,10 @@ export default function PlanSelection() {
             alt="Garantia de 7 dias" 
             className="w-40 h-auto md:w-48 transition-all hover:scale-110 duration-500"
             referrerPolicy="no-referrer"
+            loading="lazy"
+            decoding="async"
+            width="200"
+            height="200"
           />
         </div>
       </div>
