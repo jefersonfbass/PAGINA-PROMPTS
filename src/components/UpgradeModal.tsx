@@ -77,7 +77,7 @@ export default function UpgradeModal({ isOpen, onClose, onContinueBasic }: Upgra
                 <div className="w-full space-y-4">
                   <button
                     onClick={() => {
-                      window.location.href = "https://checkout.materialinteligente.com/VCCL1O8SD00S";
+                      window.location.href = "https://checkout.compraragora.site/VCCL1O8SD00S";
                     }}
                     className="w-full py-5 bg-[#F5C542] text-black rounded-2xl font-black text-[15px] uppercase tracking-widest shadow-[0_10px_30px_rgba(245,197,66,0.3)] hover:shadow-[0_15px_40px_rgba(245,197,66,0.5)] transition-all active:scale-95 flex items-center justify-center gap-3"
                   >

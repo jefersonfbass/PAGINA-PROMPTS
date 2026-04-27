@@ -16,7 +16,7 @@ const plans = [
       "Fácil de usar"
     ],
     highlight: false,
-    checkoutUrl: "https://checkout.materialinteligente.com/VCCL1O8SD00H",
+    checkoutUrl: "https://checkout.compraragora.site/VCCL1O8SD00H",
     buttonText: "QUERO COMEÇAR"
   },
   {
@@ -25,7 +25,7 @@ const plans = [
     price: "17,00",
     description: "Versão ideal para profissionais",
     badge: "MAIS ESCOLHIDO",
-    checkoutUrl: "https://checkout.materialinteligente.com/VCCL1O8SD00R",
+    checkoutUrl: "https://checkout.compraragora.site/VCCL1O8SD00R",
     features: [
       "650 Prompts de Ostentação",
       "Mais cenários e variações",
@@ -61,7 +61,7 @@ export default function PlanSelection() {
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
         onContinueBasic={() => {
-          window.location.href = "https://checkout.materialinteligente.com/VCCL1O8SD00H";
+          window.location.href = "https://checkout.compraragora.site/VCCL1O8SD00H";
         }}
       />
       {/* Background Glow */}
